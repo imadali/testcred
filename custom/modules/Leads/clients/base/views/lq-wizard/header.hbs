@@ -1,0 +1,50 @@
+<style>
+.btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled]{
+background:#176de5 !important; 
+}
+.wizard a.move-to-selected-step.active span.badge {
+    background:#1562CF !important;
+}
+.wizard .btn-large{
+	background: #555;
+}
+.wizard a.move-to-selected-step span.badge {
+	background: #717171 !important
+}
+.cstm-row-btn a.btn-primary{
+    margin-top: 17px;
+    margin-left:0px;
+}
+.label-record{margin-bottom: 5px;}
+
+@media(max-width:1300px){
+    .wizard a.move-to-selected-step{width: 17%;}
+    .wizard a.move-to-selected-step span.badge{font-size:25px;padding:0 5px;}
+}
+@media(max-width:1024px){
+    .wizard a.move-to-selected-step{width: 16%;}
+}
+@media(max-width:480px){
+    .wizard a.move-to-selected-step{width: 20%;margin-left: 3px;padding: 9px 4px;}
+    .wizard a.move-to-selected-step span.desc{margin-left:0!important;font-size:12px;}
+}
+.step-panel{
+    width: 100%;
+    padding: 20px 15px 0;
+}
+</style>
+<div class="step-panel record">
+    <div class="wizard">
+        <a class="btn btn-large btn-primary move-to-selected-step active" id="lq-wizard-step1" step="1"><span class="badge">1</span> <span class="desc">Anfrage</span></a>
+        <a class="btn btn-large btn-primary move-to-selected-step" id="lq-wizard-step2" step="2"><span class="badge">2</span> <span class="desc">Dokumente</span></a>
+        <a class="btn btn-large btn-primary move-to-selected-step" id="lq-wizard-step3" step="3"><span class="badge">3</span> <span class="desc">Antrag</span></a>
+        <a class="btn btn-large btn-primary move-to-selected-step" id="lq-wizard-step4" step="4"><span class="badge">4</span><span class="desc">Vertrag</span></a> 
+    </div>
+
+    <div class="row-fluid content-panel cstm-wizard-panel">
+        {{#eq this.templat "detail"}}
+            <div class="alert alert-info">
+                <strong>Achtung: </strong>Dieser Lead wurde geschlossen und kann nicht länger bearbeitet werden!
+            </div>
+        {{/eq}}
+        <div class="span12 padd" style="min-height:100px">

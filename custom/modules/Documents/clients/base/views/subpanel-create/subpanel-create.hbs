@@ -1,0 +1,145 @@
+<style>
+input[type="file"] {
+    max-width: 100%;
+}
+.panel_body div[data-name="category"]{
+margin-left:0px;
+}
+textarea{
+resize: none !important;
+}
+.record .record-cell[data-type="file"] .edit {
+    margin-left: 0px !important;
+}
+    [data-fieldname="filename"] .ellipsis_inline {
+        width: 320px;
+    }
+    @media(max-width:1260px){
+        [data-fieldname="filename"] .ellipsis_inline{
+            width: 200px;
+        }
+    }
+</style>
+<fieldset style="border:1px solid grey !important;padding:10px;">
+<legend style="border:none !important;width:auto;"> Add / Edit </legend>
+{{#each grid}}
+	<div class="row-fluid panel_body">
+		{{#each this}}
+			<div class="span{{span}} record-cell" data-type="{{type}}" data-name="{{name}}">
+				<div class="record-label" data-name="{{name}}">
+					{{#if dismiss_label}}
+						<br>
+					{{else}}
+						{{#if label}}
+							{{str label ../../../../module}}
+						{{else}}
+							{{str vname ../../../../module}}
+						{{/if}}
+					{{/if}}
+				</div>
+				<span class="normal index" data-fieldname="{{name}}" data-index="">
+				<span class="edit">
+				{{#if name}}
+					{{field ../../../this model=../../../model template="edit"}}
+				{{/if}}
+				</span>
+				</span>
+			</div>
+		{{/each}}
+	</div>
+{{/each}}
+
+<div class="detail" style="margin-bottom:10px">
+        <a class="rowaction btn btn-primary" href="javascript:void(0);" id="add_manual_entry_button">
+        {{str 'LBL_ADD_MANUAL_CATEGORY'}}</a>
+</div>
+<div id="doc_track_items">
+	{{#each docTrackCollection.models}}
+		<div class="row-fluid panel_body" id="{{id}}" category-name="{{category_value}}">
+		{{#each ../doc_track_fields}}
+			<div class="span{{span}} record-cell" data-type="{{type}}" data-name="{{name}}">
+					<div class="record-label" data-name="{{name}}">
+						{{#if dismiss_label}}
+							<br>
+						{{else}}
+							{{#if label}}
+								{{str label ../../../../module}}
+							{{else}}
+								{{str vname ../../../../module}}
+							{{/if}}
+						{{/if}}
+					</div>
+					<span class="normal index" data-fieldname="{{name}}" data-index="">
+						{{#eq name 'category'}}
+							<span class="mul_cat" style="white-space: normal">
+								{{../../category}}
+							</span>
+						{{else}}
+							{{#if name}}
+								{{field ../../../../this model=../../../this template="edit"}}
+							{{/if}}
+						{{/eq}}
+						
+					</span>
+			</div>
+		{{/each}}
+			<!--<div class="span2">
+				<button id="remove_doc_track_record" data-id={{id}} class="btn btn-dark"><i class="fa fa-minus"></i></button>
+			</div>-->
+		</div>
+	{{/each}}
+</div>
+
+<div id="manual_doc_track_items">
+    
+    {{#each manualDocTrackCollection.models}}
+        <div class="row-fluid panel_body" id="{{id}}" category-name="{{category_value}}">
+        {{#each ../manual_doc_track_fields}}
+                <div class="span{{span}} record-cell" data-type="{{type}}" data-name="{{name}}">
+                    <div class="record-label" data-name="{{name}}">
+                            {{#if dismiss_label}}
+                                    <br>
+                            {{else}}
+                                    {{#if label}}
+                                            {{str label ../../../../module}}
+                                    {{else}}
+                                            {{str vname ../../../../module}}
+                                    {{/if}}
+                            {{/if}}
+                    </div>
+                    <span class="normal index" data-fieldname="{{name}}" data-index="">
+                                {{#if name}}
+                                        {{field ../../../this model=../../this template="edit"}}
+                                {{/if}}
+                    </span>
+                </div>
+        {{/each}}
+            <div class="span1">
+                    <button class="btn btn-dark" style="margin-top: 15px; margin-left: 16px;" id="remove_manual_doc_track_record" data-id="{{attributes.id}}"><i class="fa fa-minus"></i></button>
+            </div> 
+        </div>
+        
+    {{/each}}
+</div>
+
+<!--<div>
+	<a class="rowaction btn btn-primary" href="javascript:void(0);" id="add_dt_button">
+	Add
+	</a>
+</div>
+-->
+<div class="btn-toolbar pull-right">
+	<span class="detail">
+	<a class="btn btn-invisible btn-link" href="javascript:void(0);" id="oaf_cancel_button">
+	Cancel</a>
+	</span>
+	<span class="detail">
+	<a class="rowaction btn btn-primary" href="javascript:void(0);" id="oaf_save_button">
+	Save</a>
+	</span>
+	<span class="detail">
+	<a class="rowaction btn btn-primary" href="javascript:void(0);" id="oaf_save_button_dummy" style="display:none;" disabled>
+	Save</a>
+	</span>
+</div>
+</fieldset>

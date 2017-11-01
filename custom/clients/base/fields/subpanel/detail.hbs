@@ -1,0 +1,338 @@
+<style>
+    .record .subpanel-cell .select2-container{
+        margin: 0px !important;
+    }
+    .record .subpanel-cell input[type="text"], .record .subpanel-cell input[type="password"], .record .subpanel-cell textarea, .record .subpanel-cell .uneditable-input{
+        margin: 0px !important;
+    }
+    .record .subpanel-cell .input-append input[type="text"] + .add-on, .record .subpanel-cell .input-append input[type="password"] + .add-on, .record .subpanel-cell .input-append textarea + .add-on{
+        margin: 0px !important;
+    }
+    .dropdown_upside{
+        top: auto !important;
+        bottom: 100% !important;
+        margin-bottom: 1px !important;
+    }
+    .cstmdataTable .doc_name, .cstmdataTable .doc_cat{
+        width: 23% !important;
+    }
+    .cstmdataTable .doc_name {
+       text-align: left !important;
+    }
+   .cstmdataTable .doc_name span{
+    border-right: #fff !important;
+    width: 95%!important;
+    position: relative!important;
+    right: 0!important;
+    }
+	.cstmdataTable .doc_status {
+        width: 8% !important;
+        min-width: 8% !important;
+    }
+    .cstmdataTable .doc_notes{
+        width: 36% !important;
+    }
+    .cstmdataTable .doc_date{
+        width: 60px !important;
+    }
+.cstmdataTable .doc_date span{
+        width: 100% !important;
+    }
+    .cstmdataTable .notes_text{
+        max-height: 100px;
+        width: 100%;
+        overflow-wrap: break-word;
+        white-space: normal !important;
+        line-height: 20px;
+        overflow-y: hidden;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        display: -webkit-box !important;
+    }
+    /*============== for firefox=============*/
+    
+    @-moz-document url-prefix() {
+        .cstmdataTable .notes_text {
+          overflow: hidden;
+          position: relative;
+        }
+        
+        .cstmdataTable .notes_text:before {
+          background: #F6F6F6;
+          bottom: 0;
+          position: absolute;
+          right: 0;
+          float: right;
+          content: '\2026';
+          margin-left: -3rem;
+          width: 3rem;
+        }
+        .cstmdataTable .notes_text:after {
+          content: '';
+          background: #F6F6F6;
+          position: absolute;
+          height: 50px;
+          width: 100%;
+          z-index: 1;
+        }
+
+        .cstmdataTable tbody tr:nth-child(even) .notes_text:before, .cstmdataTable tbody tr:nth-child(even) .notes_text:after{
+          background: #fff!important;
+          
+        }
+      }
+    .cstmdataTable .multiple_rows{
+        padding-top: 8px;
+    }
+    .cstmdataTable .multiple_dates{
+        padding-top: 18px;
+    }
+    .cstmdataTable .date_created{
+        max-width: 80px !important;
+        white-space: normal !important;
+        line-height: 17px;
+    }
+    .cstmdataTable .doc_but{
+        width: 60px !important;
+        min-width: 60px !important;
+        position: relative;
+        right: 2px;
+        top: -2px;
+    }
+.cstmdataTable .doc_but .actions{
+    width: 55px !important;
+    height: 28px !important;
+}
+}
+.tooltip{
+left: inherit !important;
+}
+.tooltip-inner{
+max-width: 500px !important;
+width: auto !important;
+z-index: 2147483647;
+line-height: 18px !important;
+}
+.cstmdataTable th span{
+        border-right: #fff !important;
+        width: 22%!important;
+    }
+.cstmdataTable tr td{
+        line-height: 35px !important;
+    }
+.tab-content {
+    overflow: inherit;
+}
+.tab-content:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+</style>
+<div data-subpanel-link="{{subpanelModule}}" id="{{div_id}}" class="filtered tabbable tabs-left subpanel-cell" style="border: 1px solid lightslategray; height: 225px; overflow-y:auto;">
+    <ul class="nav results">
+        <li class="subpanel clearfix">
+
+            <div class="flex-list-view1 left-actions right-actions" style="">
+                <div class="flex-list-view-content">
+                    <table class="table table-striped dataTable cstmdataTable">
+                        <thead>
+                            <tr module="{{subpanelModule}}">
+								
+                                {{#each columns}}
+                                <th class="{{sorting_class}} orderBy{{name}} sortable doc_name" data-fieldname="{{name}}" data-orderby="{{name}}" tabindex="-1" {{#if width}}style="width:{{width}};"{{/if}}>
+                                    <span>{{str label ../subpanelModule}}</span>
+								</th>
+                            {{/each}}
+                            
+                            <th class="doc_cat">
+                                {{str 'LBL_DOC_CATEGORY' 'Leads'}}
+                            </th>
+                            <th class="doc_month">
+                                {{str 'LBL_DOC_MONTH' 'Leads'}}
+                            </th>
+                            <th class="doc_status">
+                                {{str 'LBL_DOC_STATUS' 'Leads'}}
+                            </th>
+                            <th class="doc_notes">
+                                {{str 'LBL_DOC_NOTES' 'Leads'}}
+                            </th>
+                                <th class="{{dateEnteredDir}} orderBydate_entered sortable doc_date" data-fieldname="date_entered" data-orderby="date_entered" tabindex="-1">
+                            <span>{{str 'LBL_DATE_ENTERED' 'Leads'}}</span>                                
+
+                            </th>
+                            <th class="doc_but">
+                                <span class="actions btn-group pull-right panel-top">
+                                    <span class="small">
+                                        <a class="rowaction btn trigger_preview_all_documents" href="javascript:void(0);" rel="tooltip" data-placement="bottom" title="Preview All" name="preview_all_documents" data-original-title="Preview All">
+                                            <i class="fa fa-eye" tabindex="-1"></i>
+                                        </a>
+                                    </span>
+                                    <span class="small" >
+                                        <a class="rowaction btn trigger_create" href="javascript:void(0);" rel="tooltip" data-placement="bottom" title="" name="create_button" data-original-title="Create">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
+                                    </span>
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th data-target="alert-container" class="alert alert-warning hide" colspan="6">
+                    <div data-target="alert">
+                    </div>
+                    </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {{#each filteredCollection.models}}
+						{{#if relDocTracking.length}}
+							{{#each relDocTracking}}
+							<tr name="{{../../../subpanelModule}}_{{attributes.id}}" module="{{../../../subpanelModule}}" data-id="{{../../attributes.id}}" class="single">
+							   {{#unless @index}}
+								<td rowspan="{{../../../relDocTracking.length}}" class="rowcell subpanel-field" style="text-align: left;">
+									<a class="ellipsis_inline file_download_link" id="file_download_link" rel="tooltip" title="{{../../../this.attributes.document_name}}" href="#bwc/index.php?module=Documents&action=DetailView&record={{../../../this.attributes.id}}" target="_blank">{{../../../this.attributes.document_name}}</a>	
+								</td>
+							   {{/unless}}
+								<td class="rowcell subpanel-field">
+									<span class="doc_cat_tooltip doc_cat_{{@index}}" rel="tooltip" title="{{category}}" style="display: block;">{{category}}</span>
+								</td>
+								<td class="rowcell subpanel-field">
+									<span class="doc_month_tooltip doc_month_{{@index}}" style="display: block;" rel="tooltip" title="{{month}}" >{{month}}</span>
+								</td>
+								<td class="rowcell subpanel-field">
+									<span class="doc_status_tooltip doc_status_{{@index}}" style="display: block;" rel="tooltip" title="{{status}}" >
+                                                                            {{#eq status 'Is missing' }}
+                                                                                    <font color="red">{{status}}</font> 
+                                                                                {{else}} 
+                                                                                        {{#eq status 'NOK' }}<font color="red">{{status}}</font>
+                                                                                            {{else}}
+                                                                                                {{#eq status 'FEHLT' }}<font color="red">{{status}}</font>
+                                                                                            {{else}}
+                                                                                                {{status}}
+                                                                                            {{/eq}}    
+                                                                                        {{/eq}}  
+                                                                            {{/eq}}
+                                                                        </span>
+								</td>
+								<td class="rowcell subpanel-field">
+									<span class="doc_notes_tooltip doc_cat_{{@index}} notes_text {{#if @index}} multiple_rows {{/if}}" style="display: block;" rel="tooltip" title="{{description}}" >{{description}}</span>
+								</td>
+								{{#unless @index}}
+								<td rowspan="{{../../../relDocTracking.length}}" class="rowcell subpanel-field" style="max-width: none !important;">
+									<span class="doc_date_{{@index}}" class="date_created" style="display: block;overflow-x: visible;">{{formatDate ../../this.attributes.date_entered dateOnly=true}}</span>
+								</td>
+								{{/unless}}
+								{{#unless @index}}
+								{{#eq ../../../template "detail"}}
+								<td rowspan="{{../../../../relDocTracking.length}}">
+									<span class="overflow-visible list">
+										<span class="actions btn-group list">
+											<span class="small">
+												<a class="rowaction btn trigger_preview_single_document" href="javascript:void(0);" rel="tooltip" id={{../../../../this.attributes.id}}  data-placement="bottom" title="Preview" name="preview_single_document" data-original-title="Preview">
+													<i class="fa fa-eye" tabindex="-1"></i>
+												</a>
+											</span>
+											
+											<span class="small">
+
+											</span><a track="click:actiondropdown" class="btn dropdown-toggle"  href="javascript:void(0);" data-toggle="dropdown" data-placement="bottom" rel="tooltip" title="" data-original-title="Actions"><span class="fa fa-caret-down"></span></a>
+											<ul data-menu="dropdown" class="dropdown-menu" role="menu" style="letter-spacing: 0em;left:auto !important;">
+												<li>
+													<span class="list">
+														<a class="rowaction trigger_edit" href="javascript:void(0);" data-event="list:editrow:fire" name="edit_button" track="click:edit_button">
+															Edit
+														</a>
+													</span>
+												</li>
+												<li>
+													<span class="list">
+														<a class="rowaction trigger_delete" href="javascript:void(0);" data-event="list:unlinkrow:fire">
+															Delete
+														</a>
+													</span>
+												</li>
+											</ul>
+										</span> 
+										<span class="list"></span>
+									</span>
+								</td>
+								{{/eq}}
+								{{#eq ../../../template "edit"}}
+								<td rowspan="{{../../../../relDocTracking.length}}">
+									<a class="rowaction btn btn-primary trigger_inline_save" href="javascript:void(0);" style="margin: 0px !important;width: 70%;">Save</a>
+								</td>
+								{{/eq}}
+								{{/unless}}
+							</tr>
+							{{/each}}
+						{{else}}
+							<tr name="{{../../../subpanelModule}}_{{attributes.id}}" module="{{attributes._module}}" data-id="{{attributes.id}}" class="single">
+								<td class="rowcell subpanel-field" style="text-align: left;">
+									<a class="ellipsis_inline file_download_link" id="file_download_link" rel="tooltip" title="{{../this.attributes.document_name}}" href="#bwc/index.php?module=Documents&action=DetailView&record={{../this.attributes.id}}" target="_blank">{{../this.attributes.document_name}}</a>	
+								</td>
+								<td class="rowcell subpanel-field">
+									<span class="doc_cat_tooltip doc_cat_1" rel="tooltip" title="" style="display: block;"></span>
+								</td>
+								<td class="rowcell subpanel-field">
+									<span class="doc_month_tooltip doc_month_1" style="display: block;" rel="tooltip" title="" ></span>
+								</td>
+								<td class="rowcell subpanel-field">
+									<span class="doc_status_tooltip doc_status_1" style="display: block;" rel="tooltip" title="" ></span>
+								</td>
+								<td class="rowcell subpanel-field">
+									<span class="doc_notes_tooltip doc_cat_1 notes_text" style="display: block;" rel="tooltip" title="" ></span>
+								</td>
+								<td class="rowcell subpanel-field" style="max-width: none !important;">
+									<span class="doc_date_{{@index}}" class="date_created" style="display: block;overflow-x: visible;">{{formatDate ../this.attributes.date_entered dateOnly=true}}</span>
+								</td>
+								{{#eq ../template "detail"}}
+								<td>
+									<span class="overflow-visible list">
+										<span class="actions btn-group list">
+											<span class="small">
+												<a class="rowaction btn trigger_preview_single_document" href="javascript:void(0);" rel="tooltip" id={{../../this.attributes.id}}  data-placement="bottom" title="Preview" name="preview_single_document" data-original-title="Preview">
+													<i class="fa fa-eye" tabindex="-1"></i>
+												</a>
+											</span>
+											
+											<span class="small">
+
+											</span><a track="click:actiondropdown" class="btn dropdown-toggle"  href="javascript:void(0);" data-toggle="dropdown" data-placement="bottom" rel="tooltip" title="" data-original-title="Actions"><span class="fa fa-caret-down"></span></a>
+											<ul data-menu="dropdown" class="dropdown-menu" role="menu" style="letter-spacing: 0em;left:auto !important;">
+												<li>
+													<span class="list">
+														<a class="rowaction trigger_edit" href="javascript:void(0);" data-event="list:editrow:fire" name="edit_button" track="click:edit_button">
+															Edit
+														</a>
+													</span>
+												</li>
+												<li>
+													<span class="list">
+														<a class="rowaction trigger_delete" href="javascript:void(0);" data-event="list:unlinkrow:fire">
+															Delete
+														</a>
+													</span>
+												</li>
+											</ul>
+										</span> 
+										<span class="list"></span>
+									</span>
+								</td>
+								{{/eq}}
+								{{#eq ../template "edit"}}
+								<td>
+									<a class="rowaction btn btn-primary trigger_inline_save" href="javascript:void(0);" style="margin: 0px !important;width: 70%;">Save</a>
+								</td>
+								{{/eq}}
+							</tr>
+						{{/if}}
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </li>
+</ul>
+</div>
+<div id="{{createWrapper}}"></div>

@@ -1,0 +1,33 @@
+<?php
+// WARNING: The contents of this file are auto-generated.
+$mod_strings['LBL_CONTACTS_SUBPANEL_TITLE'] = 'Kunden';
+$mod_strings['LBL_INVITEE'] = 'Kunden';
+$mod_strings['LBL_LIST_CONTACT_NAME'] = 'Kunde';
+$mod_strings['LBL_TASKS_SUBPANEL_TITLE'] = 'Pendenz';
+$mod_strings['LNK_NEW_ACCOUNT'] = 'Neue Firma';
+$mod_strings['LNK_CREATE'] = 'Neue Firma';
+$mod_strings['LBL_MODULE_NAME'] = 'Banken';
+$mod_strings['LBL_MODULE_NAME_SINGULAR'] = 'Banken';
+$mod_strings['LBL_NEW_FORM_TITLE'] = 'Neue Firma';
+$mod_strings['LNK_ACCOUNT_LIST'] = 'Banken';
+$mod_strings['LNK_ACCOUNT_REPORTS'] = 'Firmen Berichte';
+$mod_strings['LNK_IMPORT_ACCOUNTS'] = 'Banken importieren';
+$mod_strings['MSG_SHOW_DUPLICATES'] = 'Die Firma die Sie gerade erstellen, könnte eine Dublette einer bereits bestehenden Firma sein. Firmen mit ähnlichen Namen sind unten aufgeführt.Drücken Sie auf Speichern um fortzusetzen oder auf Abbrechen um zum Modul zurückzukehren ohne die Firma zu speichern.';
+$mod_strings['LBL_SAVE_ACCOUNT'] = 'Firma speichern';
+$mod_strings['LBL_LIST_FORM_TITLE'] = 'Firmen Liste';
+$mod_strings['LBL_SEARCH_FORM_TITLE'] = 'Firmen Suche';
+$mod_strings['LBL_MEMBER_OF'] = 'Mitglied von:';
+$mod_strings['LBL_MEMBER_ORG_SUBPANEL_TITLE'] = 'Mitgliedsorganisationen';
+$mod_strings['LBL_BUG_FORM_TITLE'] = 'Banken';
+$mod_strings['LBL_DEFAULT_SUBPANEL_TITLE'] = 'Banken';
+$mod_strings['LBL_MODULE_TITLE'] = 'Banken: Home';
+$mod_strings['LBL_MODULE_ID'] = 'Banken';
+$mod_strings['LBL_ACCOUNTS_SUBPANEL_TITLE'] = 'Banken';
+$mod_strings['LBL_OPPORTUNITIES_SUBPANEL_TITLE'] = 'Anträge';
+$mod_strings['LBL_ACCOUNTS_DOTB6_CONTACT_ACTIVITIES_1_FROM_DOTB6_CONTACT_ACTIVITIES_TITLE'] = 'Activities';
+$mod_strings['LBL_HISTORICAL_SUMMARY_SUBPANEL'] = 'Activities';
+$mod_strings['LBL_DOCUMENTS_SUBPANEL_TITLE'] = 'Dokumente-X';
+$mod_strings['LBL_ACCOUNTS_DOTB6_CONTACT_ACTIVITIES_FROM_ACCOUNTS_TITLE'] = 'Aktivitäten';
+$mod_strings['LBL_ACCOUNTS_DOTB9_RISK_PROFILING_1_FROM_ACCOUNTS_TITLE'] = 'Banken';
+$mod_strings['LBL_HISTORICAL_SUMMARY'] = 'Aktivitäten-X';
+$mod_strings['LBL_HISTORICAL_SUMMARY_CUSTOM'] = 'Aktivitäten';

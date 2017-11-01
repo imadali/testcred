@@ -1,0 +1,32 @@
+
+<style>
+    textarea{
+        max-width: 206px;
+        width: 100%;
+    }
+</style>
+<div class="row-fluid panel_body" id="{{manualDocTrackItem.id}}" >
+	{{#each manual_doc_track_fields}}
+		<div class="span{{span}} record-cell" data-type="{{type}}" data-name="{{name}}">
+                        <div class="record-label" data-name="{{name}}">
+                                {{#if dismiss_label}}
+                                        <br>
+                                {{else}}
+                                        {{#if label}}
+                                                {{str label ../../../module}}
+                                        {{else}}
+                                                {{str vname ../../../module}}
+                                        {{/if}}
+                                {{/if}}
+                        </div>
+                        <span class="normal index" data-fieldname="{{name}}" data-index="">
+                            {{#if name}}
+                                    {{field ../../this model=../../manualDocTrackItem template="edit"}}
+                            {{/if}}
+                        </span>
+		</div>
+	{{/each}}
+        <div class="span1">
+		<button class="btn btn-dark" style="margin-top: 15px; margin-left: 16px;" id="remove_manual_doc_track_record" data-id={{manualDocTrackItem.id}}><i class="fa fa-minus"></i></button>
+	</div> 
+</div>

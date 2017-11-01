@@ -1,0 +1,28 @@
+<?php
+$mod_strings = array (
+	'LBL_ACCESS_DENIED_ERROR' => 'Access denied!',
+	'LBL_SAVED' => 'Saved',
+	'LBL_ATTRIBUTES' => 'Attributes',
+	'LBL_RISK_FACTOR' => 'Risk Factor',
+	'LBL_RISK_PROFILING_CONFIGURATION' => 'Risk Profiling Configuration',
+	'LBL_RISK_PROFILING_CONFIGURATION_DETAIL' => 'Configure admin setting for risk profiling',
+	'LBL_CREDIT_EXPERIENCE' => 'Credit Experience',
+	'LBL_OTHER_CREDIT_INQUIRIES' => 'Other Credit Inquiries',
+	'LBL_BIRTH_DATE_AGE' => 'Birth Date / Age',
+	'LBL_CREDIT_PURPOSE' => 'Credit Purpose',
+	'LBL_PROSECUTIONS' => 'Prosecutions',
+	'LBL_NATIONALITY' => 'Nationality',
+	'LBL_RESIDENCE_PERMIT' => 'Residence Permit',
+	'LBL_EMPLOYMENT_RELATIONSHIP' => 'Employment Relationship',
+	'LBL_EMPLOYED_SINCE' => 'Employed since',
+	'LBL_RESIDENTIAL_RATIO' => 'Residential ratio',
+	'LBL_RESIDENT_SINCE' => 'Resident since',
+	'LBL_HOMEOWNERS' => 'Homeowners',
+	'LBL_PREMIUM_REDUCTION' => 'Premium Reduction',
+	'LBL_ALIMONY' => 'Alimony',
+	'LBL_CIVIL_STATUS' => 'Civil Status',
+	'LBL_DELTA_VISTA_CODE' => 'Delta Vista code',
+	'LBL_INCOME' => 'Income',
+	'LBL_PPI' => 'PPI',
+);
+?>

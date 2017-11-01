@@ -1,0 +1,32 @@
+<div class="row-fluid panel_body" id="{{docTrackItem.id}}" category-name="{{docTrackItem.category_value}}">
+	{{#each doc_track_fields}}
+	
+		<div class="span{{span}} record-cell" data-type="{{type}}" data-name="{{name}}">
+				<div class="record-label" data-name="{{name}}">
+					{{#if dismiss_label}}
+						<br>
+					{{else}}
+						{{#if label}}
+							{{str label ../../../module}}
+						{{else}}
+							{{str vname ../../../module}}
+						{{/if}}
+					{{/if}}
+				</div>
+				<span class="normal index" data-fieldname="{{name}}" data-index="">
+				{{#eq name 'category'}}
+					<span style="white-space: normal">
+						{{../../docTrackItem.attributes.category}}
+					</span>
+				{{else}}
+					{{#if name}}
+						{{field ../../../this model=../../../docTrackItem template="edit"}}
+					{{/if}}
+				{{/eq}}
+				</span>
+		</div>
+	{{/each}}
+	<!--<div class="span2">
+		<button class="btn btn-dark" id="remove_doc_track_record" data-id={{docTrackItem.id}}><i class="fa fa-minus"></i></button>
+	</div> -->
+</div>

@@ -1,0 +1,47 @@
+<style>
+    .cstm_textarea textarea{
+        resize: none;
+    }
+     .button_r{
+        padding: 10px 10px 10px 15px;
+        overflow: hidden;
+        width: 100%;
+        display: block;
+    }
+    #doc_track_items,#manual_doc_track_items{
+        padding: 0 10px 15px 23px;
+    }
+
+</style>
+ {{#each doc_track_fields}}
+    <div class="span12 record-cell cstm_textarea" data-type="{{type}}" data-name="{{name}}">
+        <div class="span{{span}}">    
+            <div class="record-label" data-name="{{name}}">
+                {{#if dismiss_label}}
+                        <br>
+                {{else}}
+                        {{#if ../label}}
+                                {{str label ../../../module}}
+                        {{else}}
+                                {{str vname ../../../module}}
+                        {{/if}}
+                {{/if}}
+            </div>
+            <span class="normal index" data-fieldname="{{name}}" data-index="">
+                    {{#if name}}
+                            {{field ../../this model=../../this.model template="edit"}}
+                    {{/if}}
+            </span>
+        </div>
+    </div>
+{{/each}}
+
+<div class="detail button_r">
+    <a class="rowaction btn btn-primary" href="javascript:void(0);" id="lead_convert_add_manual_entry_button">
+    {{str 'LBL_ADD_MANUAL_CATEGORY'}}</a>
+</div>
+<br>
+<div id="doc_track_items">    
+</div>
+<div id="manual_doc_track_items">
+</div>

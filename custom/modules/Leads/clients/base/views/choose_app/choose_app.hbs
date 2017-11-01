@@ -1,0 +1,54 @@
+<style>
+    .sidebar_document {
+        top: 10%!important;
+    }
+.table_title{
+        background-color: #f6f6f6;
+        font-size: 15px;
+        padding: 10px;
+        width: 98%;
+        border-radius: 0!important;
+        border: 1px solid #ccc;
+        border-left: 0;
+        border-right: 0;
+    }
+    .header_pane_title{ 
+        padding: 20px;
+        border-right: 1px solid #ddd;
+        max-width: 66.8%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        margin-left: 0!important;
+}
+
+</style>
+
+<div class="headerpane span8 header_pane_title">
+        <h1>
+            <span class="index" data-fieldname="title" data-index="">
+                    <span sfuuid="11" class="">Granted Applications</span>
+            </span>
+        </h1>
+</div>
+
+<div  class="scroll-div"  style="  margin-top: 11px;background-color: #ffffff; border: 1px solid #cfcfcf; margin:20px;padding: 20px;">
+        <div style="clear: both"></div>
+        <br>
+            <div id="apps">
+                <h4 class="table_title">Select Application</h4>
+                <br>
+                    <table id="select_app">
+                        <tr>
+                        <td>
+                            <input style="display: none;" type="radio" name="selected_app" value="" checked>
+                            </td>
+                        </tr>
+                    </table>
+                <div style="clear: both"></div>
+                </div>
+                <br>
+                    <input type="hidden" id="hide_preview_buttons" value="true"/>
+                    <a name="close_button" track="click:close_button" href="javascript:void(0);" class="btn btn-primary" style="  margin-left: 0px; font-size: 13px;padding: 5px 20px;">Cancel</a>
+                    <a name="create_contract" track="click:create_contract" href="javascript:void(0);" class="btn btn-primary"  style=" font-size: 13px;padding: 5px 20px;">Create Contract</a>
+            </div>

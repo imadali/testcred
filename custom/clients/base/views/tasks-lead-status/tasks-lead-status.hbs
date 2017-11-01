@@ -1,0 +1,88 @@
+<div class="lead-task">
+    <div class="row-fluid record-panel panel-header">
+        <div class="span3" ><h4>Name</h4></div>
+        {{#if this.order_status}}
+            {{#if this.order_status_in}}
+                <div class="span3 sortThis"  id="status" sort="asc" style="cursor: hand !important"><h4>Status<i class="fa fa-sort pull-right" aria-hidden="true"></i></h4></div>
+            {{else}}
+                <div class="span3 sortThis"  id="status" sort="desc" style="cursor: hand !important"><h4>Status<i class="fa fa-sort pull-right" aria-hidden="true"></i></h4></div>
+            {{/if}}
+        {{else}}
+            <div class="span3 sortThis"  id="status" sort="asc" style="cursor: hand !important"><h4>Status<i class="fa fa-sort pull-right" aria-hidden="true"></i></h4></div>
+        {{/if}}
+
+        {{#if this.order_assignto}}
+            {{#if this.order_assignto_in}}
+                <div class="span3 sortThis"  id="assign_to_name"  sort="asc"><h4>Assign To<i class="fa fa-sort pull-right" aria-hidden="true"></i></h4></div>
+            {{else}}
+                <div class="span3 sortThis"  id="assign_to_name"  sort="desc"><h4>Assign To<i class="fa fa-sort pull-right" aria-hidden="true"></i></h4></div>
+            {{/if}}
+        {{else}}
+            <div class="span3 sortThis"  id="assign_to_name"  sort="asc"><h4>Assign To<i class="fa fa-sort pull-right" aria-hidden="true"></i></h4></div>
+        {{/if}}
+
+        {{#if this.order_date}}
+            {{#if this.order_date_in}}
+                <div class="span3 sortThis" id="Oldest" sort="asc"><h4>Date<i class="fa fa-sort pull-right" aria-hidden="true"></i></h4></div>
+            {{else}}
+                <div class="span3 sortThis" id="Oldest" sort="desc"><h4>Date<i class="fa fa-sort pull-right" aria-hidden="true"></i></h4></div>
+            {{/if}}
+        {{else}}
+            <div class="span3 sortThis" id="Oldest" sort="asc"><h4>Date<i class="fa fa-sort pull-right" aria-hidden="true"></i></h4></div>
+        {{/if}}
+    </div>
+</div>
+
+    {{#each mydata}}
+    <div class="lead-task">
+        <div class="row-fluid record-panel  mySortBox" data-panelname="panel_body">
+            <div class="row-fluid record-panel-header panel-inactive " id="accord" tabindex="-1">
+                <div class="span3" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;margin-top: 1%;">
+               
+                    <a href="#{{buildRoute module="Leads" id=this.lead_id action="detail"}}"> {{this.lead_first}}</a>
+                
+                </div>
+                <div  class="span3 " >
+                    <h4 style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;">  {{this.lead_status}}</h4>
+                </div>
+                <div class="span3" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;">
+                    <h4 style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;">  {{this.lead_assign_to_name}} </h4>
+                </div>
+                <div class="span3" >
+                    <div class="span10" style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;">
+                        <h4 style="font-family: Helvetica, Arial, sans-serif;font-size: 12px;">  {{this.last_open_task}} </h4>
+                    </div>
+                    {{#if  this.related_tasks}}
+                        <div class="span2">
+                            <button class="btn btn-invisible record-panel-arrow">
+                                <i class="fa fa-chevron-down" rel="tooltip" data-container="body" data-title="Toggle Visibility" data-original-title="" title=""></i>
+                            </button>
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+            {{#if  this.related_tasks}}
+            <div class="row-fluid record-panel-content  " style="display: none;">
+                <table class="table table-striped  dataTable reorderable-columns">
+                    <thead>
+                        <th>Subject</th>
+                        <th>Status</th>
+                        <th>Assign To</th>
+                        <th>Due Date</th>
+                    </thead>
+                    <tbody>
+                    {{#each this.related_tasks}}
+                        <tr>
+                            <th><a href="#{{buildRoute module="Tasks" id=this.id action="detail"}}">{{name}}</a> </th>
+                            <th>{{this.status}}</th>
+                            <th>{{this.assigned_user_name}}</th>
+                            <th>{{this.date_due}}</th>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            {{/if}}
+        </div>
+    </div>
+    </div>
+{{/each}}

@@ -1,0 +1,109 @@
+<style>
+    .sidebar_document {
+        top: 10%!important;
+    }
+.table_title{
+        background-color: #f6f6f6;
+        font-size: 15px;
+        padding: 10px;
+        width: 98%;
+        border-radius: 0!important;
+        border: 1px solid #ccc;
+        border-left: 0;
+        border-right: 0;
+    }
+.header_tr{}
+    .header_tr td {
+    border: 1px solid #ccc;
+    font-weight:600;
+    }
+    .header_tr td:first-child{
+        border-left: 0;
+    }
+    .header_tr td:last-child{border-right:0;}
+    #select_documents tr td {width: 25%;padding: 5px;}
+    
+    #select_documents tr td  .ellipsis_inline{
+        max-width: 150px;
+        display: inline-block!important;
+        vertical-align: middle;
+    }
+    #select_documents tbody tr td {
+        max-width: 288px;
+    }
+    .header_pane_title{ 
+        padding: 20px;
+        border-right: 1px solid #ddd;
+        max-width: 66.8%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        margin-left: 0!important;
+}
+@media(min-width:1370px) and (max-width:2000px){
+     #select_documents tr td  .ellipsis_inline{max-width: 198px;}
+}
+@media(max-width:1100px){
+     #select_documents tr td  .ellipsis_inline{max-width: 100px;}
+}
+@media(max-width:527px){
+     #select_documents tr td  .ellipsis_inline{max-width: 60px;}
+}
+
+</style>
+
+<div class="headerpane span8 header_pane_title">
+        <h1>
+            <span class="index" data-fieldname="title" data-index="">
+                    <span sfuuid="11" class="">Send Documents</span>
+            </span>
+        </h1>
+</div>
+
+<div  class="scroll-div"  style="  margin-top: 11px;background-color: #ffffff; border: 1px solid #cfcfcf; margin:20px;padding: 20px;">
+<h4 class="table_title">Select Documents To Send</h4> <span style="display: none; font-weight: bold;left: 6px;position: relative; top: 8px;"  id="select_all"><input type="checkbox" name="select_all" id="select_all2" track="click:select_all"> Select All</span>
+    <div class="document_table">
+        <table id="select_documents" class="table-striped" width="100%">
+            <thead>
+            <tr class="header_tr">
+                <td>Name</td>
+                <td>Category</td>
+                <td>Month</td>
+                <td>Notes</td>
+            </tr>
+            </thead>
+        </table>
+    </div>
+        <h4 class="table_title">Communication Channel</h4>
+        <table id="comm_chan">
+            <tr>
+                <td>
+                    <input type="radio" name="send_via" value="email"> Email
+                </td>
+                <td>
+                    <input type="radio" name="send_via" value="ftp"> Upload
+                </td>
+                <td>
+                        <span id="comm_chan_err" style="color: red; display: none;"> Please select a communication channel</span>
+                </td>
+            </tr>
+        </table>
+        <div style="clear: both"></div>
+        <br>
+            <div id="apps">
+                <h4 class="table_title">Select Application</h4>
+                <br>
+                    <table id="select_app">
+                        <tr>
+                        <td>
+                            <input style="display: none;" type="radio" name="selected_app" value="" checked>
+                            </td>
+                        </tr>
+                    </table>
+                <div style="clear: both"></div>
+                </div>
+                <br>
+                    <input type="hidden" id="hide_preview_buttons" value="true"/>
+                    <a name="close_button" track="click:close_button" href="javascript:void(0);" class="btn btn-primary" style="  margin-left: 0px; font-size: 13px;padding: 5px 20px;">Cancel</a>
+                    <a name="compose_email" track="click:compose_email" href="javascript:void(0);" class="btn btn-primary"  style=" font-size: 13px;padding: 5px 20px;">Select</a>
+            </div>

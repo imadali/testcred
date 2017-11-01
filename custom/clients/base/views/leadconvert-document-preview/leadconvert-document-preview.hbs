@@ -1,0 +1,45 @@
+
+<div class="headerpane">
+    <h1>
+        <span class="record-cell" data-type="label" data-name="title">
+            <span class="table-cell-wrapper span18">
+                <span class="index span6" data-fieldname="title" data-index="" style="width: 25%;">
+                    <span sfuuid="11" class="">{{str 'LBL_CHOOSING_DOCUMENT_CONVERT'}}</span>
+                </span>
+                <span class="span6" style="text-align:right;width: 70%;">
+                    <a name="leadconvert_merge_button"  href="javascript:void(0);" 
+                        class="btn btn-primary" style="  margin-left: 0px; font-size: 12px;padding: 5px 20px;">{{str 'LBL_MERGE_CREATE_CONVERSION'}}</a>
+                    <a name="leadconvert_preview_close_button"  href="javascript:void(0);" 
+                        class="btn btn-primary" style="  margin-left: 0px; font-size: 12px;padding: 5px 20px;">{{str 'LBL_CANCEL_CONVERT'}}</a>   
+                </span>      
+            </span>
+        </span>
+    </h1> 
+</div>
+
+<div class="record" style="padding-left: 4.6%;">
+    <div class="row-fluid content-panel">
+        {{#each lead_field}}
+
+        <div class="span{{span}} record-cell edit" data-type="{{type}}" data-name="{{name}}">
+            <span class="table-cell-wrapper">
+                <div class="record-label" data-name="{{name}}"> {{str label ../this.model.module}} </div>
+                <span class="normal index" data-fieldname="{{name}}" data-index="">
+                    <span class="edit edit-front">
+                        {{#if name}}
+							{{field ../../this model=../../this.leadModel template="edit"}}
+                        {{/if}}
+                    </span>
+                    <span class="record-edit-link-wrapper" data-name="{{name}}">
+                        <a class="record-edit-link btn btn-invisible" data-type="{{type}}" data-name="{{name}}"><i class="fa fa-pencil"></i></a>
+                    </span>
+                </span>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<div id="document_categories_content" style="margin-left: 25px;margin-top: 16px;">
+</div>
+
+<input type="hidden" id="hide_preview_buttons" value="true"/>
+

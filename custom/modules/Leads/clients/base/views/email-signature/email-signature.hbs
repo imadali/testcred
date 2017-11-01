@@ -1,0 +1,54 @@
+<br/>
+<br/>
+
+{{#each custom_salutation}}
+    <div class="span12 record-cell" data-type="{{type}}" data-name="{{name}}">
+        <div class="span{{span}}">    
+            <div class="record-label" data-name="{{name}}">
+                {{#if dismiss_label}}
+                        <br>
+                {{else}}
+                        {{#if ../label}}
+                                {{str label ../../../module}}
+                        {{else}}
+                                {{str vname ../../../module}}
+                        {{/if}}
+                {{/if}}
+            </div>
+            <span class="normal index" data-fieldname="{{name}}" data-index="">
+                    {{#if name}}
+                            {{field ../../this model=../../this.model template="edit"}}
+                    {{/if}}
+            </span>
+        </div>
+    </div>
+{{/each}}
+
+<br/>
+{{#each custom_payoff}}
+    <div class="span12 record-cell" data-type="{{type}}" data-name="{{name}}">
+        <div class="span{{span}}">    
+            <div class="record-label" data-name="{{name}}">
+                {{#if dismiss_label}}
+                        <br>
+                {{else}}
+                        {{#if ../label}}
+                                {{str label ../../../module}}
+                        {{else}}
+                                {{str vname ../../../module}}
+                        {{/if}}
+                {{/if}}
+            </div>
+            <span class="normal index" data-fieldname="{{name}}" data-index="">
+                    {{#if name}}
+                            {{field ../../this model=../../this.model template="edit"}}
+                    {{/if}}
+            </span>
+        </div>
+    </div>
+{{/each}}
+
+<div class="span12 record-cell">
+    &nbsp;<a class="rowaction btn btn-primary" href="javascript:void(0);" id="save_settings">
+    {{str 'LBL_SAVE' 'Leads'}}</a>
+</div>

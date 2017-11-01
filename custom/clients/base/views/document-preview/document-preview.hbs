@@ -1,0 +1,127 @@
+<script src="custom/include/zoom_in_zoom_out/jquery.smoothZoom.min.js"></script>
+<style>
+    .headerpane.custome {
+        width: calc(34.042553198%);
+        padding: 19px 15px 0;
+    }
+    div#tabs-content {
+        position: relative;
+        top: 45px;
+    }
+        .label_name{margin-bottom:10px;}
+        .bttn_row{
+            overflow: hidden;
+            width: 100%;
+            clear: both;
+            text-align: right;
+            margin-bottom: 10px;    
+        }
+    .img-label img {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+    }
+    .row.preview_row {
+        margin-left: 0;
+        margin-top: 10px;
+        padding-left: 15px;
+    }
+    .seprator{
+        border-color:#ddd; color:#ddd;
+    }
+    .select_all {
+        text-align: left !important;
+        margin-left: 6px;
+        margin-top: -26px;
+        margin-bottom: 18px !important;
+    }
+
+    .small_thumbnail {
+        width: auto !important;
+        height: auto !important;
+    }
+</style>
+    <div class="headerpane custome">
+        <div class="pull-left">
+            <h1>
+                <span class="index" data-fieldname="title" data-index="">
+                    <span sfuuid="11" class="">{{str 'LBL_DOCUMENT_NAME_MERGE_HEADER'}}</span>
+                </span>
+            </h1>
+        </div> 
+        <div class="btn-group pull-right">
+            <a class="btn btn-invisible" data-toggle="tab" id="close_merge_view"><i class="fa fa-times"></i></a>
+        </div>
+
+    </div>
+
+
+    <div id="tabs-content" class="record">
+        {{#eq preventRender false}}
+        <div class="bttn_row">
+            <span class="bttn_row select_all">
+                <a class="btn btn-primary pull-left" id="mark_all_pages"  >{{str 'LBL_MARK_ALL_PAGES'}}</a>
+                <a class="btn btn-primary pull-right" id="merge">{{str 'LBL_RE_MERGE'}}</a>
+            </span>
+        </div>
+        {{#each displayImagesInfo}}
+                {{#each this}}
+                    <div class="row-fluid panel_body" id="preview_pane_{{this.document_id}}">
+                    {{#eq this.converted 1 }}
+                        {{#eq @index 0}}
+                            <div class="span12 record-cell label_name" data-name="">
+                                <div class="" data-name=""><b>{{str 'LBL_DOCUMENT_NAME_MERGE'}}:</b> {{this.document_name}}
+                                </div>
+                                <div class="" data-name=""><b>{{str 'LBL_CATEGORY_MERGE'}}:</b> {{this.category}}
+                                </div>
+                            </div>
+                        {{/eq}}
+                        {{#notEq @index 0}}
+                            <div class="span12 record-cell label_name" data-name="">
+                                <div class="" data-name=""></div>
+                            </div>
+                        {{/notEq}}
+                        <div class="bttn_row">
+                            {{#eq @index 0}}
+                                 <a class="btn btn-primary" id="show_full_document" pdf_file_path ="{{this.encodedPath}}" pdf_name="{{this.encodedFileName}}" doc_id="{{this.document_id}}" >{{str 'LBL_SHOW_DOCUMENT'}}</a>
+                            {{/eq}}
+                            <a class="btn btn-primary" id="open_in_new_tab" pdf_file_path ="{{this.encodedPath}}" pdf_name="{{this.encodedFileName}}" page_number="{{this.pageNumber}}" >{{str 'LBL_OPEN_IN_NEW_TAB'}}</a>
+                        </div>
+                        <div class="row preview_row">
+                            <div class="span1" data-name="">
+                                <div class="" data-name="">
+                                     <input type="checkbox" name="images_checkbox"  total_pages="{{this.total_pages}}" record_id = "{{this.document_id}}_{{@index}}" document_id = "{{this.document_id}}" pdf_file_path= "{{this.pdfFilePath}}" pdf_name="{{this.pdfName}}" page_number="{{this.pageNumber}}">
+                                </div>
+                            </div>
+                            <div class="span11" data-name="">
+                                <div class="record-label img-label" data-name="" style="background-color: grey;">
+                                    <img  class="zoom_in_zoom_out" param_height="{{this.height}}" param_width="{{this.width}}" degree-vale="0" id="thumbnail_images" document_id ="{{this.document_id}}_{{@index}}"  src="{{this.ImageURL}}" / ></img>
+                                </div>
+                                <div style="text-align:center; padding-top: 10px;">
+                                    <i class="fa fa-arrow-up fa-2x" aria-hidden="true" document_id = "{{this.document_id}}"  custom_document_id = "{{this.document_id}}_{{@index}}"  id="swap_up"></i>
+                                    &nbsp;<i class="fa fa-undo fa-2x" aria-hidden="true" document_id = "{{this.document_id}}"  custom_document_id = "{{this.document_id}}_{{@index}}"  id="anti_rotate_clock_wise"></i>
+                                    &nbsp;<i class="fa fa-repeat fa-2x" aria-hidden="true" document_id = "{{this.document_id}}" custom_document_id = "{{this.document_id}}_{{@index}}"  id="rotate_clock_wise"></i>
+                                    &nbsp;<i class="fa fa-arrow-down fa-2x" aria-hidden="true" document_id = "{{this.document_id}}"  custom_document_id = "{{this.document_id}}_{{@index}}"  id="swap_down"></i>
+                                </div>    
+                            </div>
+                        </div>    
+                    {{/eq}}
+                    {{#notEq this.converted 1}}
+                        <div class="span12 record-cell label_name" data-name="">
+                            <div class="" data-name=""><b>{{str 'LBL_DOCUMENT_NAME_MERGE'}}:</b> {{this.document_name}}
+                            </div>
+                            <div class="" data-name=""><b>{{str 'LBL_NO_PREVIEW_RECORD'}}</b> 
+                            </div>
+                        </div>
+                    {{/notEq}}
+                    </div>
+                {{/each}}
+                <hr class="seprator">
+               
+            {{/each}}
+        {{else}}
+            <div class="span12 record-cell" data-name="">
+                <div class="" data-name=""><strong>{{str 'LBL_NO_PREVIEW_RECORD'}}<strong/>
+                </div>
+            </div>
+        {{/eq}}
+    </div>

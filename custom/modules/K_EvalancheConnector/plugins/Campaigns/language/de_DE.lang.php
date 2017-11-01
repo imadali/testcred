@@ -1,0 +1,33 @@
+<?php
+$mod_strings['LBL_FORM_CONFIG_HEADLINE'] = 'Einstellungen';
+$mod_strings['LBL_FORM_CONFIG_INFO'] = 'Evalanche-Connector Einstellungen festlegen (sync. mit SugarCRM)';
+$mod_strings['LBL_MANDATE_ID'] = 'Mandate-ID';
+$mod_strings['LBL_MANDATE_ID_HELP'] = 'Mandatsnummer aus Evalanche (das ist der Kunde)';
+$mod_strings['LBL_TYPE_ID'] = 'Type-ID Versendung';
+$mod_strings['LBL_TYPE_ID_HELP'] = 'Interne Evalanche-Type-ID für Versendungen (Default: 67)';
+$mod_strings['LBL_EVA_TIME_OFFSET'] = 'Evalanche Zeitverschiebung';
+$mod_strings['LBL_EVA_TIME_OFFSET_HELP'] = 'Zeitverschiebung der Datumsfelder im SugarCRM (in Minuten, Default: -120)';
+$mod_strings['LBL_REFRESHLIMIT'] = 'Aktualisierungsintervall (Tage:Minuten)';
+$mod_strings['LBL_REFRESHLIMIT_HELP'] = 'Hier kann mit Beistrich getrennt angegeben werden wie oft die Kampagnendaten synchronisiert werden (Bsp. 3:60,7:360 bedeutet bis 3 Tage nach Versendung alle 60 mins und bis 7 Tage nach Versendung alle 6 Std.)';
+$mod_strings['LBL_DAYLIMIT'] = 'History-Tageslimit';
+$mod_strings['LBL_DAYLIMIT_HELP'] = 'Alle Versendungen die jünger als X Tage sind werden nach SugarCRM übertragen.';
+$mod_strings['LBL_MAX_RUNNING_MINS'] = 'Max. Sync-Laufzeit in Minuten';
+$mod_strings['LBL_MAX_RUNNING_MINS_HELP'] = 'Der Kampagnenimport läuft max. X Minuten, danach wird dieser beendet und ausstehende Kampagnen erst am nächsten Tag übertragen.';
+$mod_strings['LBL_EVA_URL'] = 'Evalanche-URL';
+$mod_strings['LBL_EVA_URL_HELP'] = 'Die URL des Evalanche-Webportals (dient zur Statistikabfrage und Report-Verlinkung)';
+$mod_strings['LBL_GET_STATISTICS'] = 'Statistiken übertragen';
+$mod_strings['LBL_GET_STATISTICS_HELP'] = 'Übertragung von Lese-Chart und 6 Stunden-Empfängeraktivität Diagramm';
+$mod_strings['LBL_GET_RECIPIENTS'] = 'Empfängerliste übertragen';
+$mod_strings['LBL_GET_RECIPIENTS_HELP'] = 'Übertragung der Empfängerliste aus Evalanche (Kontakte müssen in SugarCRM bereits existieren)';
+$mod_strings['LBL_GET_IMPRESSIONS'] = 'Öffnungsinfo übertragen';
+$mod_strings['LBL_GET_IMPRESSIONS_HELP'] = 'Übertragung der Newsletter Mail-Öffnungsinfos aus Evalanche (wird in Empfängerliste angezeigt und dient zur Berechnung der Lesebereichtschaft)';
+$mod_strings['LBL_GET_ARTICLE_IMPRESSIONS'] = 'Artikeldetails übertragen';
+$mod_strings['LBL_GET_ARTICLE_IMPRESSIONS_HELP'] = 'Übertragung der einzelnen Kampagnen-Artikeln inkl. Verknüpfung zu Lesern (das sind die Empfänger, die den Artikel geöffnet haben)';
+$mod_strings['LBL_GET_UNSUBSCRIBES'] = 'Abmeldungen übertragen';
+$mod_strings['LBL_GET_UNSUBSCRIBES_HELP'] = 'Übertragung der Newsletter Abmeldungen aus Evalanche (wird in Empfängerliste angezeigt)';
+$mod_strings['LBL_EUSERNAME'] = 'Evalanche Benutzer';
+$mod_strings['LBL_EUSERNAME_HELP'] = 'Benutzername f&uuml;r den Evalanche-Login';
+$mod_strings['LBL_EPASSWORD'] = 'Evalanche Passwort';
+$mod_strings['LBL_EPASSWORD_HELP'] = 'Passwort f&uuml;r den Evalanche-Login';
+$mod_strings['LBL_CONFIG_SAVED'] = 'Konfiguration wurde gespeichert';
+?>

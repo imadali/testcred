@@ -1,0 +1,5 @@
+<?php
+//THIS FILE IS AUTO GENERATED, DO NOT MODIFY
+$mod_strings['LBL_OPPORTUNITIES_ACCOUNTS_1_FROM_ACCOUNTS_TITLE'] = 'Banken';
+$mod_strings['LBL_OPPORTUNITIES_LEADS_1_FROM_LEADS_TITLE'] = 'Leads-X';
+$mod_strings['LBL_ACCOUNTS'] = 'Banken-X';

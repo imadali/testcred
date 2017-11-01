@@ -1,0 +1,78 @@
+<style>
+    .front-view-setup{
+        margin-top: -60px;
+    margin-bottom: 10px;
+    }
+    .front-view-setup,.step-panel{
+        padding-top: 15px;
+    }
+    .front-view{
+        padding-top: 21px;
+        padding-left: 21px;
+        border-top: 1px solid #fff;
+        margin: 0px;
+    }
+    .front-view input, .front-view textarea{
+        border: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+    .front-view textarea:focus,.front-view .select2-results:focus{
+        border: 1px solid blue;
+    }
+    .front-view input:focus{
+        border: 1px solid #ddd;
+    }
+    .front-view .edit{
+        display: inherit;
+    }
+    .front-view .record-cell{
+        margin: 0px 10px 0px 0px;
+    }
+    .front-view .select2-choice{
+        background: #fff;
+        border-color: white;
+        border: none;
+        background-color: #fff;
+        background-image: none;
+    }
+    .front-view .select2-search-choice-close, .front-view .add-on, .front-view .select2-arrow{
+        display: none !important;
+    }
+    .front-view .span6 {
+        width: 48%;
+    }
+.select2-container.required .select2-choice {
+    border-color: #fff !important;
+}
+.select2-container.select2-container-disabled .select2-choice {
+    background-color: #fff !important;
+}
+.input-append, .input-prepend {
+    font-size: 15px !important;
+}
+.front-view .select2-container-disabled{
+opacity: 1 !important;
+}
+</style>
+<div class="step-panel record">
+    <div class="row-fluid content-panel cstm-wizard-panel front-view">
+        {{#each front_fields}}
+
+        <div class="span{{span}} record-cell edit" data-type="{{type}}" data-name="{{name}}">
+            <span class="table-cell-wrapper">
+                <div class="record-label" data-name="{{name}}"> {{str label ../this.model.module}} </div>
+                <span class="normal index" data-fieldname="{{name}}" data-index="">
+                    <span class="edit edit-front">
+                        {{#if name}}
+                        {{field ../../this model=../this.populateValues template="edit" class="front-field"}}
+                        {{/if}}
+                    </span>
+                    <span class="record-edit-link-wrapper" data-name="{{name}}">
+                        <a class="record-edit-link btn btn-invisible" data-type="{{type}}" data-name="{{name}}"><i class="fa fa-pencil"></i></a>
+                    </span>
+                </span>
+        </div>
+        {{/each}}
+    </div>
+</div>

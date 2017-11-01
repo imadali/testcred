@@ -1,0 +1,109 @@
+<style>
+.leadActivities .comments{
+padding: 0px 10px;
+}
+.leadActivities .activitystream-list{
+    width: 99% !important;
+    max-height: 600px !important;
+}
+.leadActivities .no_activity{
+    text-align: center !important;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    margin: 0px !important;
+}
+.leadActivities .preview-pane .activitystream-layout {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.leadActivities .block-footer{
+    background-color: #fff;
+    text-align: left;
+    padding: 2px;
+    border-top: 1px solid #e9e9e9;
+}
+.leadActivities .block-footer button{
+    text-decoration: none;
+}
+.leadActivities .task_closed{
+    background-color: #999999 !important;
+}
+.leadActivities .more_text, .email_html, .hide{
+    display: none;
+}
+.leadActivities .show_html{
+    position: relative;
+    top: 32px;
+    color: #176de5;
+    left: -22px;
+    font-size: 10px;
+}
+.leadActivities .page{
+    float: right;
+}
+.leadActivities .activitystream-footer{
+  padding: 5px;
+}
+.notes_ellipsis_inline {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+</style>
+{{#if this.showActivities}}
+<div class="leadActivities">
+<div class="listing">
+<div class="activitiesStreams">
+
+{{#if this.activities.records}} 
+    <ul class="activitystream-list results">
+    {{#each this.activities.records}}
+        <li id="activity_{{id}}" class="activitystream-posts-comments-container">
+        <div class="page"></div>
+            <div class="task_{{status}} label label-module label-module-md label-{{_module}} pull-left" rel="tooltip" data-placement="right" title="" data-original-title="Lead" tabindex="-1">{{#eq _module 'Emails'}}Em 
+<a href="javascript: void(0);" class="show_html"      id="show_html_{{id}}"   onclick="$('#show_html_{{id}}').hide();$('#show_simple_{{id}}').show(); $('#simple_{{id}}').hide(); $('#html_{{id}}').show();">Html</a>
+<a href="javascript: void(0);" class="show_html hide" id="show_simple_{{id}}" onclick="$('#show_simple_{{id}}').hide();$('#show_html_{{id}}').show(); $('#html_{{id}}').hide(); $('#simple_{{id}}').show();">Text</a>
+{{/eq}}
+{{#eq _module 'Tasks'}}Ts{{/eq}}{{#eq _module 'Notes'}}Nt{{/eq}}</div>
+            <p></p>
+            <div><span class="tagged"><a href="#{{_module}}/{{id}}"> {{name}}</a></span></div>
+            <p></p>
+            {{#eq _module 'Emails'}}
+            <span class="details"><b>To:</b> {{to_addrs}}</span><br/>
+            <span class="details"><b>From:</b> {{from_addr}}</span><br/>
+            <span class="details"><b>Date:</b> {{formatDate date_entered dateOnly=true}}</span>
+            {{#if attachements_count}}<br/><span class="details"><b>Attachements:</b>{{#each attachements}} <br/><b>*</b> <a class="notes_ellipsis_inline" data-placement="bottom" title="{{filename}}" href="rest/v10/Notes/{{note_id}}/file/filename?force_download=1&amp;1492174265692=1&amp;platform=base" target="_blank">{{filename}}</a>{{/each}}</span>{{/if}}
+            <ul class="comments">
+            <span id="simple_{{id}}">{{{showMore description id}}}</span>
+            <span id="html_{{id}}" class="email_html">{{{description_html}}}</span>
+            </ul>            
+            {{/eq}}
+            {{#eq _module 'Tasks'}}
+            <span class="details"><b>Assigned To:</b> <a href="#bwc/index.php?module=Employees&action=DetailView&record={{assigned_user_id}}"> {{assigned_user_name}}</a></span><br>
+            <span class="details"><b>Date Created:</b> {{formatDate date_entered dateOnly=true}}</span><br>
+             <span class="details"><b>Last Edited:</b> {{formatDate date_modified dateOnly=true}}</span><br>
+             <span class="details"><b>Due Date:</b> {{formatDate date_due dateOnly=true}}</span>
+            
+<ul class="comments"><span>{{{showMore description id}}}</span></ul>   
+            {{/eq}}
+            {{#eq _module 'Notes'}}
+            <span class="details"><b>Created By:</b> <a href="#bwc/index.php?module=Employees&action=DetailView&record={{created_by_id}}"> {{created_by_name}}</a></span><br>            
+            <span class="details"><b>Date Created:</b> {{formatDate date_entered dateOnly=true}}</span><br>            
+            <span class="details"><b>Last Edited:</b> {{formatDate date_modified dateOnly=true}}</span>
+            <ul class="comments"><span>{{{showMore description id}}}</span></ul>
+            {{/eq}}
+</li>
+ {{/each}}
+<li class="activitystream-footer">
+<div class="lead_activities_footer"><div class="block-footers"><button class="more-activities btn btn-link btn-invisible more padded">More Activities...</button></div></div>
+</li>
+    </ul>
+{{else}}
+<p class="no_activity">No data available.</p>
+{{/if}}
+
+</div>
+</div>
+ </div>
+{{/if}}

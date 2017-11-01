@@ -1,0 +1,155 @@
+<?php
+
+$mod_strings["LBL_MORE_THAN_80000"] = "> 80'000";
+$mod_strings["LBL_POSTCODE_IF_LIECHTENSTEIN"] = "Liechtenstein und nicht CH- oder FL-Bürger";
+$mod_strings["LBL_ZIP_LIECHTENSTEIN_AND_SWISS"] = "Liechtenstein und CH- oder FL-Bürger";
+$mod_strings["LBL_IF_YOUNGER_THAN_18"] = "jünger als 18";
+$mod_strings["LBL_IF_YOUNGER_THAN_21"] = "jünger als 21";
+$mod_strings["LBL_IF_YOUNG_21_CREDIT_AMOUNT_15"] = "jünger als 21 und Kreditbetrag &gt; 15'000";
+$mod_strings["LBL_IF_YOUNGER_THAN_25"] = "jünger als 25";
+$mod_strings["LBL_IF_YOUNG_25_CREDIT_AMOUNT_25"] = "jünger als 25 und Kreditbetrag &gt; 25'000";
+$mod_strings["LBL_IF_OLDER_THAN_59"] = "älter als 59";
+$mod_strings["LBL_IF_OLDER_THAN_59_AND_CREDIT"] = "älter als 59 und Kreditbetrag &gt; 50'000";
+$mod_strings["LBL_IF_YOUNGER_THAN_64"] = "jünger als 64";
+$mod_strings["LBL_IF_YOUNGER_64_CREDIT_50000"] = "jünger als 64 und Kreditbetrag &gt; 50'000";
+$mod_strings["LBL_IF_OLDER_THAN_65"] = "älter als 65";
+$mod_strings["LBL_IF_OLDER_THAN_70"] = "älter als 70";
+$mod_strings["LBL_PAY_BILLS_TAXES_INV_REAL_EST"] = "Kreditzweck Steuern oder Rechnungen bezahlen' Investitionen oder Immobilien im Ausland";
+$mod_strings["LBL_CURRENTLY_OPEN_ENFORCEMENTS"] = "offene Betreibungen";
+$mod_strings["LBL_IF_ENFORCEMENTS_IN_THE_PAST"] = "vergangene Betreibungen";
+$mod_strings["LBL_IF_IRAN_RED_SYR_MIANMAR_SUD"] = "Nationalität = Iran, Nordkorea, Syrien, Mianmar, Sudan";
+$mod_strings["LBL_IF_IRAQ_ZIM_CON_LEB_YEM_USA"] = "Nationalität = Irak, Liberia, Simbabwe, Elfenbeinküste, Demokratische Republik Kongo, Weissrussland, Libanon, Somalia, Guinea, Eritrea, Libyen, Guinea-Bissau, Zentralafrikanische Republik, Jemen, USA";
+$mod_strings["LBL_IF_REDT_GER_AUS_DEN_SWEDEN"] = "Nationalität = Schweiz, Deutschland, Frankreich, Italien, Luxemburg, Belgien, Niederlande, Österreich, Irland, Dänemark, UK, Spanien, Finnland, Schweden, Norwegen, Liechtenstein";
+
+$mod_strings["LBL_IF_B_PERMIT_LESS_6_MONTH"] = "B-Ausweis &lt; 6 Monate";
+$mod_strings["LBL_IF_B_PERMIT_BTWN_6_12_MONTH"] = "B-Ausweis 6 bis 12 Monate";
+$mod_strings["LBL_IF_B_BTW_12_NET_M_SAL_L_4000"] = "B-Ausweis 6 bis 12 Monate und Netto-Monats-Lohn &lt; 4'000";
+$mod_strings["LBL_IF_B_6_12_SAL_BTW_4_6_AMT_15"] = "B-Ausweis 6 bis 12 Monate Netto-Monats-Lohn 4'000 bis 6'000 Kreditbetrag &gt; 15'000 ";
+$mod_strings["LBL_IF_B_6_12_SAL_BTW_6_8_AMT_20"] = "B-Ausweis 6 bis 12 Monate Netto-Monats-Lohn 6'000 bis 8'000 Kreditbetrag &gt; 20'000";
+$mod_strings["LBL_IF_B_BTW_6_12_M_SAL_8_AMT_30"] = "B-Ausweis 6 bis 12 Monate Netto-Monats-Lohn &gt; 8'000 Kreditbetrag &gt; 30'000";
+$mod_strings["LBL_IF_B_BTW_12_24__SAL_4_AMT_15"] = "B-Ausweis 12 bis 24 Monate und Netto-Monats-Lohn &lt; 4'000 Kreditbetrag &gt; 15'000";
+$mod_strings["LBL_IF_B_BTW_12_24_SAL_4_6_AM_25"] = "B-Ausweis 12 bis 24 Monate Netto-Monats-Lohn 4'000 bis 6'000 Kreditbetrag &gt; 25'000";
+$mod_strings["LBL_IF_B_BTW_12_24_SAL_6_8_AM_30"] = "B-Ausweis 12 bis 24 Monate Netto-Monats-Lohn 6'000 bis 8'000 Kreditbetrag &gt; 30'000";
+$mod_strings["LBL_IF_B_BTW_12_24_SAL_8_AMNT_40"] = "B-Ausweis 12 bis 24 Monate Netto-Monats-Lohn &gt; 8'000 Kreditbetrag &gt; 40'000";
+$mod_strings["LBL_IF_B_BTW_24_36_SAL_4_AMNT_25"] = "B-Ausweis 24 bis 36 Monate und Netto-Monats-Lohn &lt; 4'000 Kreditbetrag &gt; 25'000";
+$mod_strings["LBL_IF_B_BTW_24_36_SAL_4_6_AM_35"] = "B-Ausweis 24 bis 36 Monate Netto-Monats-Lohn 4'000 bis 6'000 Kreditbetrag &gt; 35'000";
+$mod_strings["LBL_IF_B_BTW_24_36_SAL_6_8_AM_40"] = "B-Ausweis 24 bis 36 Monate Netto-Monats-Lohn 6'000 bis 8'000 Kreditbetrag &gt; 40'000";
+$mod_strings["LBL_IF_B_BTW_24_36_SAL_8_AMNT_50"] = "B-Ausweis 24 bis 36 Monate Netto-Monats-Lohn &gt; 8'000 Kreditbetrag &gt; 50'000";
+$mod_strings["LBL_IF_B_36_SAL_4_CREDIT_AMNT_35"] = "B-Ausweis &gt; 36 Monate Netto-Monats-Lohn &lt; 4'000 Kreditbetrag &gt; 35'000";
+$mod_strings["LBL_IF_B_36_SAL_4_6_CREDIT_AM_45"] = "B-Ausweis &gt; 36 Monate Netto-Monats-Lohn 4'000 bis 6'000 und Kreditbetrag &gt; 45'000";
+$mod_strings["LBL_IF_B_36_SAL_6_8_CREDIT_AM_50"] = "B-Ausweis &gt; 36 Monate Netto-Monats-Lohn 6'000 bis 8'000 und Kreditbetrag &gt; 50'000";
+$mod_strings["LBL_IF_B_36_SAL_8_CREDIT_AMNT_60"] = "B-Ausweis &gt; 36 Monate Netto-Monats-Lohn &gt; 8'000 Kreditbetrag &gt; 60'000";
+$mod_strings["LBL_IF_B_PERMIT_BTW_12_24_MONTHS"] = "B-Ausweis 12 bis 24 Monate";
+$mod_strings["LBL_IF_B_PERMIT_BTW_24_36_MONTHS"] = "B-Ausweis 24 bis 36 Monate";
+$mod_strings["LBL_IF_B_12_ALO_CHILD_SIN_PARENT"] = "B-Ausweis &gt; 12 Monate und alleinerziehend";
+
+$mod_strings["LBL_IF_G_LESS_3_YEARS_EMPLOYER"] = "G-Ausweis und weniger als 3 Jahre beim gleichen Arbeitgeber";
+$mod_strings["LBL_IF_G_PERMIT_MORE_3_YEARS"] = "G-Ausweis &gt; 3 Jahre";
+$mod_strings["LBL_IF_L_PERMIT_LESS_1_YEAR"] = "L-Ausweis &lt; 1 Jahr";
+$mod_strings["LBL_IF_L_PERMIT_MORE_THAN_1_YEAR"] = "L-Ausweis &gt; 1 Jahr";
+$mod_strings["LBL_IF_DIPLOMAT_LESS_3_YEARS"] = "Diplomat und weniger als 3 Jahre in CH";
+$mod_strings["LBL_IF_DIPLOMAT_MORE_3_YEARS"] = "Diplomat und mehr als 3 Jahre in CH";
+$mod_strings["LBL_IF_SELF_EMP_LESS_2_YEARS"] = "weniger als 2 Jahre selbständig";
+$mod_strings["LBL_IF_SELF_MORE_2_YEARS"] = "mehr als 2 Jahre selbständig";
+$mod_strings["LBL_IF_UNEMP_NOT_WORKING"] = "arbeitslos";
+
+
+$mod_strings["LBL_IF_TEMP_CONT_6_MONTHS"] = "temporär angestellt &lt; 6 Monate";
+$mod_strings["LBL_IF_TEMP_CONT_6_12_MON"] = "temporär angestellt seit 6 bis 12 Monaten";
+$mod_strings["LBL_IF_TEMP_CONT_12_MONTH"] = "temporär angesetllt &gt; 12 Monate";
+$mod_strings["LBL_IF_DISABLE_PENSION_RET"] = "Rentner";
+$mod_strings["LBL_IF_LESS_THAN_3_MONTHS"] = "fest angestellt &lt; 3 Monate";
+$mod_strings["LBL_IF_LESS_THAN_12_MONTH"] = "fest angestellt &lt; 12 Monate";
+$mod_strings["LBL_IF_WITH_PAR_BY_PARENT"] = "lebt bei den Eltern";
+$mod_strings["LBL_IF_URBANIZE_FLAT_SHARE"] = "lebt in WG";
+$mod_strings["LBL_IF_LESS_THAN_12_MONTHS"] = "Wohnsitz &lt; 1 Jahr";
+$mod_strings["LBL_IF_LESS_THAN_24_MONTHS"] = "Wohnsitz &lt 2 Jahre";
+$mod_strings["LBL_IF_NO"] = "besitzt kein Eigenheim";
+$mod_strings["LBL_IF_YES_AND_LESS_THAN_2_YEARS"] = "besitzt Eigenheim seit weniger als 2 Jahren";
+$mod_strings["LBL_IF_YES_LONG_2_CURRENT_ADRESS"] = "besitzt und bewohnt Eigenheim seit mehr als 2 Jahren";
+$mod_strings["LBL_IF_YES"] = "erhält Prämienverbilligung";
+$mod_strings["LBL_IF_CUSTOMER_RECEIVES_ALIMONY"] = "erhält Alimente";
+$mod_strings["LBL_IF_CUSTOMER_HAS_PAY_ALIMONY"] = "bezahlt Alimente";
+$mod_strings["LBL_IF_DIV_JUDICIAL_SEP_DIV_SEP"] = "ist geschieden oder gerichtlich getrennt";
+
+$mod_strings["LBL_IF_MARRIED"] = "ist verheiratet";
+$mod_strings["LBL_NO_CODE_AND_CANNOT_BE_FOUND"] = "kein Code gefunden";
+$mod_strings["LBL_CODE_1"] = "Code 1";
+$mod_strings["LBL_CODE_2"] = "Code 2";
+$mod_strings["LBL_CODE_3"] = "Code 3";
+$mod_strings["LBL_CODE_4"] = "Code 4";
+$mod_strings["LBL_IF_DV_SCORE_440"] = "DeltaVista < 440";
+
+$mod_strings["LBL_TOTAL_INCOME_LESS_THAN_2500"] = "Einkommen &lt; 2'500";
+$mod_strings["LBL_TOTAL_INCOME_LESS_THAN_3000"] = "Einkommen &lt; 3'000";
+$mod_strings["LBL_TOTAL_INCOME_LESS_THAN_4000"] = "Einkommen &lt; 4'000";
+$mod_strings["LBL_IF_CREDIT_AMOUNT_80000"] = "Kreditbetrag &gt; 80'000";
+$mod_strings["LBL_IF_CREDIT_DURATION_60_MONTHS"] = "Laufzeit &gt; 60 Monate";
+$mod_strings["LBL_IF_YOUNGER_THAN_25_AND_CREDI"] = "jünger als 25 und Kreditbetrag &gt; 25'000";
+$mod_strings["LBL_IF_OLDER_59_CREDIT_AMOUNT_50"] = "älter als 59 und Kreditbetrag > 50'000";
+$mod_strings["PANEL_BODY"] = "Business Card";
+$mod_strings["LBL_RECORDVIEW_PANEL1"] = "Geburtsdatum / Alter";
+$mod_strings["LBL_RECORDVIEW_PANEL2"] = "Nationalität";
+$mod_strings["LBL_RECORDVIEW_PANEL3"] = "Aufenthaltsbewilligung";
+$mod_strings["LBL_RECORDVIEW_PANEL4"] = "Berufliche Situation";
+$mod_strings["LBL_RECORDVIEW_PANEL5"] = "angestellt seit";
+$mod_strings["LBL_RECORDVIEW_PANEL6"] = "Residential ratio";
+$mod_strings["LBL_RECORDVIEW_PANEL7"] = "angestellt seit";
+$mod_strings["LBL_RECORDVIEW_PANEL8"] = "Eigenheimbesitzer";
+$mod_strings["LBL_RECORDVIEW_PANEL9"] = "Prämienverbilligung";
+$mod_strings["LBL_RECORDVIEW_PANEL10"] = "Alimente";
+$mod_strings["LBL_RECORDVIEW_PANEL11"] = "Zivilstand";
+$mod_strings["LBL_RECORDVIEW_PANEL12"] = "DeltaVista-Code";
+$mod_strings["LBL_RECORDVIEW_PANEL13"] = "Einkommen";
+$mod_strings["LBL_RECORDVIEW_PANEL14"] = "PPI";
+$mod_strings["LBL_MODULE_NAME"] = "Risiko-Profile";
+$mod_strings["LBL_MODULE_TITLE"] = "Risiko-Profile";
+$mod_strings["LNK_NEW_RECORD"] = "erstelle ein Risiko-Profil";
+$mod_strings["LNK_LIST"] = "zeige Risiko-Profile";
+
+$mod_strings["LBL_MODULE_NAME_SINGULAR"] = "Risiko-Profile";
+
+$mod_strings["LBL_NEW_FORM_TITLE"] = "neue Risiko-Profile";
+
+$mod_strings["LNK_IMPORT_VCARD"] = "importiere eine Risiko-Profil vCard";
+$mod_strings["LNK_IMPORT_DOTB9_RISK_PROFILING"] = "importiere ein Risiko-Profil";
+$mod_strings["LBL_LIST_FORM_TITLE"] = "Risiko-Profil-Liste";
+$mod_strings["LBL_SEARCH_FORM_TITLE"] = "suche ein Risiko-Profil";
+$mod_strings["LBL_HOMEPAGE_TITLE"] = "Meine Risiko-Profile";
+$mod_strings["LBL_IF_B_BTW_24_36_SAL_4_A_G_25"] = "B-Ausweis 24 bis 36 Monate und Netto-Monats-Lohn &lt; 4'000 Kreditbetrag &gt; 25'000";
+$mod_strings["LBL_HAS_INTRUM_RESPONSE"] = "intrum vorhanden";
+$mod_strings["LBL_INTRUM_SCORE"] = "Score intrum";
+$mod_strings["LBL_INTRUM_REQUEST_ID"] = "ID intrum";
+$mod_strings["LBL_DELTAVISTA_SCORE"] = "Score Deltavista";
+$mod_strings["LBL_HAS_DELTAVISTA_RESPONSE"] = "DeltaVista vorhanden";
+$mod_strings["LBL_DELTAVISTA_REQUEST_ID"] = "ID DeltaVista";
+$mod_strings["LBL_STATUS"] = "Status";
+
+$mod_strings["LBL_CREDIT_EXPERIENCE"] = "Krediterfahrung";
+$mod_strings["LBL_OTHER_CREDIT_INQUIRIES"] = "Weitere Kreditanfragen";
+$mod_strings["LBL_BIRTH_DATE_AGE"] = "Geburtsdatum / Alter";
+$mod_strings["LBL_CREDIT_PURPOSE"] = "Kreditzweck";
+$mod_strings["LBL_PROSECUTIONS"] = "Betreibungen";
+$mod_strings["LBL_NATIONALITY"] = "Nationalität";
+$mod_strings["LBL_RESIDENCE_PERMIT"] = "Aufenthaltsbewilligung";
+$mod_strings["LBL_EMPLOYMENT_RELATIONSHIP"] = "Berufliche Situation";
+$mod_strings["LBL_EMPLOYED_SINCE"] = "Angestellt seit";
+$mod_strings["LBL_RESIDENTIAL_RATIO"] = "Residential ratio";
+$mod_strings["LBL_RESIDENT_SINCE"] = "Wohnhaft seit";
+$mod_strings["LBL_HOMEOWNERS"] = "Eigenheimbesitzer";
+$mod_strings["LBL_PREMIUM_REDUCTION"] = "Prämienverbilligung";
+$mod_strings["LBL_ALIMONY"] = "Alimente";
+$mod_strings["LBL_CIVIL_STATUS"] = "Zivilstand";
+$mod_strings["LBL_DELTA_VISTA_CODE"] = "DeltaVista-Code";
+$mod_strings["LBL_INCOME"] = "Einkommen";
+$mod_strings["LBL_PPI"] = "PPI";
+$mod_strings["LBL_RISK_PROFILING_CONFIGURATION"] = "Risiko-Profil-Einstellungen";
+$mod_strings["LBL_ATTRIBUTES"] = "Attribute";
+$mod_strings["LBL_RISK_FACTOR"] = "Risiko-Faktor";
+$mod_strings["LBL_DATE_ENTERED"] = "Erstelldatum";
+$mod_strings["LBL_DATE_MODIFIED"] = "Änderungsdatum";
+$mod_strings["LBL_ASSIGNED_TO_ID"] = 'zugewiesene User ID';
+$mod_strings["LBL_ASSIGNED_TO"] = 'zugewiesen zu';
+$mod_strings["LBL_ASSIGNED_TO_NAME"] = 'zugewiesen zu';
+
+?>

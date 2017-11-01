@@ -1,0 +1,41 @@
+<?php
+ // created: 2016-10-05 14:30:59
+$dictionary['Task']['fields']['lead_status_c']['required'] = false;
+$dictionary['Task']['fields']['lead_status_c']['source'] = 'custom_fields';
+$dictionary['Task']['fields']['lead_status_c']['name'] = 'lead_status_c';
+$dictionary['Task']['fields']['lead_status_c']['vname'] = 'LBL_LEAD_STATUS';
+$dictionary['Task']['fields']['lead_status_c']['type'] = 'enum';
+$dictionary['Task']['fields']['lead_status_c']['massupdate'] = true;
+$dictionary['Task']['fields']['lead_status_c']['default'] = '';
+$dictionary['Task']['fields']['lead_status_c']['no_default'] = false;
+$dictionary['Task']['fields']['lead_status_c']['importable'] = 'true';
+$dictionary['Task']['fields']['lead_status_c']['duplicate_merge'] = 'enabled';
+$dictionary['Task']['fields']['lead_status_c']['duplicate_merge_dom_value'] = '1';
+$dictionary['Task']['fields']['lead_status_c']['audited'] = true;
+$dictionary['Task']['fields']['lead_status_c']['reportable'] = true;
+$dictionary['Task']['fields']['lead_status_c']['unified_search'] = false;
+$dictionary['Task']['fields']['lead_status_c']['merge_filter'] = 'disabled';
+$dictionary['Task']['fields']['lead_status_c']['calculated'] = false;
+$dictionary['Task']['fields']['lead_status_c']['len'] = 100;
+$dictionary['Task']['fields']['lead_status_c']['size'] = '20';
+$dictionary['Task']['fields']['lead_status_c']['options'] = 'dotb_credit_request_status_list';
+$dictionary['Task']['fields']['lead_status_c']['full_text_search']['boost'] = 1;
+$dictionary['Task']['fields']['amount_c']['required'] = false;
+$dictionary['Task']['fields']['amount_c']['source'] = 'custom_fields';
+$dictionary['Task']['fields']['amount_c']['name'] = 'amount_c';
+$dictionary['Task']['fields']['amount_c']['vname'] = 'LBL_AMOUNT_C';
+$dictionary['Task']['fields']['amount_c']['type'] = 'varchar';
+$dictionary['Task']['fields']['amount_c']['massupdate'] = false;
+$dictionary['Task']['fields']['amount_c']['default'] = '';
+$dictionary['Task']['fields']['amount_c']['no_default'] = false;
+$dictionary['Task']['fields']['amount_c']['importable'] = 'true';
+$dictionary['Task']['fields']['amount_c']['duplicate_merge'] = 'enabled';
+$dictionary['Task']['fields']['amount_c']['duplicate_merge_dom_value'] = '1';
+$dictionary['Task']['fields']['amount_c']['audited'] = false;
+$dictionary['Task']['fields']['amount_c']['reportable'] = true;
+$dictionary['Task']['fields']['amount_c']['unified_search'] = false;
+$dictionary['Task']['fields']['amount_c']['merge_filter'] = 'disabled';
+$dictionary['Task']['fields']['amount_c']['calculated'] = false;
+$dictionary['Task']['fields']['amount_c']['len'] = '255';
+$dictionary['Task']['fields']['amount_c']['size'] = '20';
+

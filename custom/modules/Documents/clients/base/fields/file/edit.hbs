@@ -1,0 +1,20 @@
+{{!--
+/*
+ * Your installation or use of this SugarCRM file is subject to the applicable
+ * terms available at
+ * http://support.sugarcrm.com/06_Customer_Center/10_Master_Subscription_Agreements/.
+ * If you do not agree to all of the applicable terms or do not have the
+ * authority to bind the entity as an authorized representative, then do not
+ * install or use this SugarCRM file.
+ *
+ * Copyright (C) SugarCRM Inc. All rights reserved.
+ */
+--}}
+{{#if docFileObj}}
+    <div class="row-fluid file-field">
+        <a class="tabDetailViewDFLink span10 ellipsis_inline" title="{{../docFileObj.fileName}}" href="{{../docFileObj.fileUrl}}">{{../docFileObj.fileName}}</a>
+        <button class="btn fa fa-times-circle" data-action="delete"></button>
+    </div>
+{{else}}
+    <input type="file" name="{{name}}"{{#if def.tabindex}} tabindex="{{def.tabindex}}"{{/if}} />
+{{/if}}

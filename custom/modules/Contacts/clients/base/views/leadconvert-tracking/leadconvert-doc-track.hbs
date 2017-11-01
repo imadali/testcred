@@ -1,0 +1,34 @@
+<style>
+.cstm_textarea textarea{
+    resize: none;
+}
+</style>
+<div class="row-fluid panel_body cstm_textarea" id="{{docTrackItem.id}}" category-name="{{docTrackItem.category_value}}">
+	{{#each doc_track_category_fields}}
+	
+            <div class="span{{span}} record-cell" data-type="{{type}}" data-name="{{name}}">
+                &nbsp;<div class="record-label" data-name="{{name}}">
+                    {{#if dismiss_label}}
+                            <br>
+                    {{else}}
+                            {{#if ../label}}
+                                    {{str label ../../../module}}
+                            {{else}}
+                                    {{str vname ../../../module}}
+                            {{/if}}
+                    {{/if}}
+                </div>
+                <span class="normal index" data-fieldname="{{name}}" data-index="">
+                        {{#eq name 'category'}}
+                                <span style="white-space: normal">
+                                        {{../../docTrackItem.attributes.category}}
+                                </span>
+                        {{else}}
+                                {{#if name}}
+                                        {{field ../../../this model=../../../docTrackItem template="edit"}}
+                                {{/if}}
+                        {{/eq}}
+                </span>
+            </div>
+	{{/each}}
+</div>

@@ -1,0 +1,26 @@
+<?php
+    $dictionary['Opportunity']['fields']['status_bank_application_kk'] = array(
+            'name' => 'status_bank_application_kk',
+            'labelValue' => 'Status Bank Application',
+            'vname' => 'LBL_STATUS_BANK_APP',
+            'dependency' => '',
+            'required' => false,
+            'type' => 'enum',
+            'massupdate' => true,
+            'default' => '',
+            'no_default' => false,
+            'comments' => '',
+            'help' => '',
+            'importable' => 'true',
+            'duplicate_merge' => 'enabled',
+            'duplicate_merge_dom_value' => '1',
+            'audited' => true,
+            'reportable' => true,
+            'unified_search' => false,
+            'merge_filter' => 'disabled',
+            'calculated' => false,
+            'len' => 100,
+            'size' => '20',
+            'options' => 'dom_status_bank_application_kk',
+);
+ ?>
