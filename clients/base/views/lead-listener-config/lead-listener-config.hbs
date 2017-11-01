@@ -1,0 +1,64 @@
+<style>
+
+.paddings {
+    padding-left: 2%;
+}
+
+.heading {
+    font-size: medium;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+div.scrolling {
+    overflow-y: scroll !important;
+    height: 625px;
+}
+#content{
+    overflow-y: scroll;
+    padding-bottom: 20px;
+}
+
+</style>
+<div class="headerpane">
+<div align="left" class="heading">{{str 'LBL_LEAD_LISTENER_HEADING' 'Leads'}}</div> 
+</div>
+<br/>
+
+<div class="scrolling">
+<table class="table table-striped dataTable" style=" margin-top: 39.20px  !important;margin-left: 29px;width: 96%;!important">
+  <tr>
+    <th id="head1" width="20%"><b>Days</b></th>
+    <th id="head2" width="20%"><b>From</b></th>
+    <th id="head3" width="20%"><b>To</b></th>
+    <th id="head4" width="32%"><b>Email</b></th>
+    <th id="head5" width="6%"><b>Enable</b></th>
+  </tr>
+
+{{#each this.meta.panels}}
+
+   <tr>
+   {{#each this.fields}}
+ 
+    {{#eq vname 'Day'}}
+        <th width="{{width}}" class="paddings">
+                {{field ../../../this model= ../../../this.model template="detail"}}
+        </th>
+
+    {{else}}
+            <th width="{{width}}" class="paddings">
+                {{field ../../../this model= ../../../this.model template="edit"}}
+           </th>
+    {{/eq}}
+
+
+    {{/each}}
+  </tr>
+                    
+{{/each}}
+</table>
+</div>
+
+<div class="span12 record-cell" style="    margin-top: 20px;">
+    &nbsp;<a class="rowaction btn btn-primary" href="javascript:void(0);" id="save_config" style="width: 8%;">
+    {{str 'LBL_SAVE' 'Leads'}}</a>
+</div>

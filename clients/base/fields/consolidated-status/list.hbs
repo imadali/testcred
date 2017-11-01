@@ -1,0 +1,8 @@
+{{!--
+/*
+ * customize to add openTask class for a field incase due date
+ */
+--}}
+<div class="ellipsis_inline" data-placement="bottom" title="{{#unless value}}{{#if def.placeholder}}{{str def.placeholder this.model.module}}{{/if}}{{/unless}}{{value}}" >
+    {{#if def.link}}<a href="{{#if def.events}}javascript:void(0);{{else}}{{href}}{{/if}}">{{translatedVal}}</a>{{else}}{{translatedVal}}{{/if}}
+    </div>

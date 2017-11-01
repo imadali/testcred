@@ -1,0 +1,41 @@
+<div class="risk-profile">
+<table style="margin-top: 3%;margin-bottom:1%;width:100%">
+
+    <tr>
+        <th><p class="column-header">{{str 'LBL_DELTAVISTA_SCORE' 'Leads'}} </p></th>
+        <th style="width: 23%;"><p class="column-detail text-width-1">{{deltavistaScore}} </p></th>
+    </tr>
+    <tr>
+        <th><p class="column-header">{{str 'LBL_DV_RISK_CLASS' 'Leads'}}</p></th>
+        <th style="width: 23%;"><p class="column-detail text-width-2" style="word-wrap: break-word;width: 13em !important;">{{deltavistaRiskClass}}</p></th>
+    </tr>
+</table>
+</div>
+
+<div class="leadbox">
+                    <ul>
+                        {{#eachOptions fieldData}}
+                            {{#eq value ''}}
+                                <li class="leadbox-panel" id="{{key}}">{{str key ../../this.moduleName}}<i class="fa  fa-check"></i></li>
+                            {{else}}
+                                <li class="leadbox-panel" id="{{key}}">{{str key ../../this.moduleName}}<i class="fa  fa-close"></i></li>
+                            {{/eq}}
+                        {{/eachOptions}}
+                    </ul>
+            </div>
+            <div class="leadbox addlist" style="background-color:white">
+                
+                    
+                    <ul>
+                        {{#eachOptions leadData}}
+                            {{#eachOptions value}}
+                                {{#eq value 'LBL_RESIDENCE_SINCE_LESS_THAN_3_YEARS'}}
+                                <li class="leadbox-list" >{{str value ../../../this.moduleName}}</li>
+                                {{else}}
+                                <li class="leadbox-list" >{{str value ../../../this.moduleName}} is missing</li>
+                                {{/eq}}
+                            {{/eachOptions}}
+                        {{/eachOptions}}
+                    </ul>
+            </div>
+</div>

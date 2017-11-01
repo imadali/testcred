@@ -1,0 +1,57 @@
+<style>
+
+.heading {
+    font-size: medium;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+div.scrolling {
+    overflow-y: scroll !important;
+    height: 500px;
+    margin-top: 4%;
+}
+div.drawer{
+    overflow-y: scroll;
+}
+
+</style>
+
+
+<div class="headerpane">
+    <div align="left" class="heading">{{str 'LBL_SHARE_DASHBOARDS' 'Home'}}</div> 
+</div>
+
+<div class="scrolling">
+
+<table class="table table-striped dataTable" style="">
+  <tr>
+    <th style="font-size: small;"><b>{{str 'LBL_SELECTION_PROMPT' 'Home'}}</b></th>
+  </tr>
+
+    {{#each this.activeUsers}}
+     <tr>
+        <td>
+              <input type="checkbox" id={{id}} name="share_dash">{{name}}
+        </td>
+     </tr>
+    {{/each}} 
+</table>
+
+</div>
+
+<table class="" style="">
+    <tr>
+        <th>
+              <div class="record-cell">
+                  &nbsp;<a class="rowaction btn btn-primary" href="javascript:void(0);" id="close_drawer" style="width: 100%;">{{str 'LBL_DRAWER_CLOSE' 'Home'}}</a>
+              </div>
+        </th>
+        <th style="width: 25%;"></th>
+        <th>
+              <div class="record-cell">
+                  &nbsp;<a class="rowaction btn btn-primary" href="javascript:void(0);" id="share_drawer" style="width: 100%;">{{str 'LBL_SHARE_ACTION' 'Home'}}</a>
+              </div>
+        </th>
+    </tr>
+
+</table>
